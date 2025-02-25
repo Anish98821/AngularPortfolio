@@ -1,0 +1,66 @@
+@use "../../../styles.scss" as *;
+
+.certificate-section{
+    background-color: $secondary-color-light;
+    scroll-margin-top: 80px;
+    padding:5%;
+    .title{
+        font-size: 5vh;
+        color: white;
+        .highlighted-section{
+            color: $primary-color;
+        }
+    }
+
+    .card-grid{
+        margin-top: 5vh;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); // Creates 3 equal columns
+        
+        .certificate-card{
+            width:auto;
+            color:white;
+            font-size: 5;
+            background-color: $secondary-color;
+            padding:5vh;
+            max-width: 25vw;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            cursor: pointer;
+            transition: transform ease-in-out 0.25s;
+            &:hover{
+                transform: scale(1.05);
+            }
+
+            .issuer-logo{
+                .issuer-logo-image{
+                    width: 7vh;
+                }
+
+            }
+
+            .card-info{
+                margin-left: 2vw;
+                .certificate-name{
+                    font-size: 1.7vh;
+                    font-weight: bold;
+                }
+
+                .issuer{
+                    font-size: 1.5vh;
+                    font-weight: 200;
+                }
+
+                .issued-date{
+                    font-weight: bold;
+                    font-size:1.3vh;
+                    margin-top: 1vh;
+                    color:grey;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

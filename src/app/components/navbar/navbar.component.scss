@@ -1,0 +1,36 @@
+@use "../../../styles.scss" as *;
+
+.navbar{
+    position: fixed;
+    display:flex;
+    height:80px;
+    width: 92vw;
+    background-color: $secondary-color-light;
+    justify-items: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    z-index: 100;
+
+    .title-text{
+        color:white;
+        font-family: "Silkscreen";
+        font-size: 20px;
+    }
+
+    .navbar-link-group{
+        display: flex;
+        margin-left: auto;
+    }
+    
+    .navbar-link {
+        text-decoration: none;
+        color: $primary-color;
+        margin-left: 70px;
+        transition: color 0.2s ease-in-out;
+    
+        &:hover {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<div class="experience-section" id="experience-section">
+    <div class="title">
+        Places I have <span class="highlighted-text">worked</span>
+    </div>
+        <div class="content">
+            <div class="card-section">
+                <div class="bullet-path" tabindex="0">
+                </div>
+                <div class="experience-card">
+                    <div class="bullet">
+                        <img class = "bullet-vector" src="assets/vectors/CurrentExperienceBullet.svg" alt="">
+                    </div>
+                    <div class="information" (mouseenter)="changeWorkDetail('EGDK')">
+                        <img class = "logo" src="assets/company_logos/EG.jpg" onclick="navigate('https://global.eg.dk/')">
+                        <div class = "company-name" onclick="navigate('https://global.eg.dk/')">EGDK India Pvt Ltd</div>
+                        <div class = "designation">Software Developer Trainee</div>
+                        <div class = "duration">Decemeber 2024 - Present </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="bullet">
+                        <img class = "bullet-vector" src="assets/vectors/PastExperienceBullet.svg" alt="">
+                    </div>
+                    <div class="information" (mouseenter)="changeWorkDetail('TorSecure')">
+                        <img class = "logo" src="assets/company_logos/TorSecure.jpg" onclick="navigate('https://torsecure.com/')">
+                        <div class = "company-name" onc>Torsecure Cyber LLP</div>
+                        <div class = "designation">Software Developer Intern</div>
+                        <div class = "duration">Decemeber 2023 - October 2024 </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="bullet">
+                        <img class = "bullet-vector" src="assets/vectors/PastExperienceBullet.svg" alt="">
+                    </div>
+                    <div class="information" (mouseenter)="changeWorkDetail('Dreamers')">
+                        <img class = "logo" src="assets/company_logos/Dreamers.jpg" onclick="navigate('http://www.dtlabz.com/')">
+                        <div class = "company-name" onclick="navigate('http://www.dtlabz.com/')">Sahyadri Edu DREAMERS R&D Pvt. Ltd</div>
+                        <div class = "designation">Game Developer Intern</div>
+                        <div class = "duration">August 2022 - January 2023 </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <app-experience-detail-card [data] = "WorkData"/>
+                <!-- <img class="section-vector" src="assets/vectors/ExperienceSectionVector.svg" alt="">  -->
+            </div>
+        </div>
+</div>

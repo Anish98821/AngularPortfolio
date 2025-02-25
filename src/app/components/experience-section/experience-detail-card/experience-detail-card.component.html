@@ -1,0 +1,31 @@
+<div class = "experience-detail-card">
+    <div class = "title-section">
+        <div class = "intro">Things I did at</div>
+        <div class = "company-name">{{data['company-name']}}</div>
+        <div class = "designation">as a <span class="highlighted-section">{{data['designation']}}</span></div>
+    </div>
+    <div class="skill-badges">
+        @for(item of data['skill-badges']; track null){
+            <div class="badge">
+                <div class="logo-holder">
+                    <img src="{{item['image-url']}}" alt="" class="badge-logo">
+                </div>
+                <div class="name">
+                    {{item['skill-name']}}
+                </div>
+            </div>
+        }
+    </div>
+    <div class="experience-detail-section">
+        @for(item of data['skills']; track null ){
+            <div class="experience-detail">
+                <div class="logo-holder">
+                    <img src="{{item['image-url']}}" alt="" class="skill-logo">
+                </div>
+                <div class="detail-point">
+                    {{item['skill-text']}}
+                </div>
+            </div>
+        }
+    </div>
+</div>

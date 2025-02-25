@@ -1,0 +1,51 @@
+<div class = "certificate-section" id = "certificate-section">
+    <div class = "title">
+        <span class = "highlighted-section">
+            Certificates and Badges
+        </span>
+        <span>
+            that I have
+        </span>
+    </div>
+
+    <div class = "card-grid">
+        @for(item of certificateData; track null){
+            <div class = "certificate-card" (click) = "navigate(item.credential_link)">
+                <div class = "issuer-logo">
+                    <img src={{item.issuer_logo}} class = "issuer-logo-image" alt="">
+                </div>
+                <div class = "card-info">
+                    <div class = "certificate-name">{{item.certification_name}}</div>
+                    <div class = "issuer">{{item.issuer}}</div>
+                    <div class = "issued-date">Issued on {{item.issued_on}}</div>
+                </div>
+            </div>
+        }
+
+
+        <!-- <div class = "certificate-card">
+            <div class = "issuer-logo">
+                <img src="assets/certificate_issuer_logos/LinkedIn.svg" class = "issuer-logo-image" alt="">
+            </div>
+            <div class = "card-info">
+                <div class = "certificate-name">PostgresSQL Essential Training</div>
+                <div class = "issuer">LinkedIn</div>
+                <div class = "issued-date">Issued on Jan 2025</div>
+            </div>
+        </div>
+
+        <div class = "certificate-card">
+            <div class = "issuer-logo">
+                <img src="assets/certificate_issuer_logos/LinkedIn.svg" class = "issuer-logo-image" alt="">
+            </div>
+            <div class = "card-info">
+                <div class = "certificate-name">PostgresSQL Essential Training</div>
+                <div class = "issuer">LinkedIn</div>
+                <div class = "issued-date">Issued on Jan 2025</div>
+            </div>
+        </div> -->
+
+        
+    </div>
+
+</div>

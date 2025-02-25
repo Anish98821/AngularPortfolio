@@ -1,0 +1,80 @@
+@use "../../../../styles.scss" as *;
+
+$card-background-color: rgba(0, 0, 0, 0.3);
+$skill-badge-background-color: #242424;
+.experience-detail-card {
+    background-color: $card-background-color;
+    padding:9% 10%;
+    border-radius: 8px;
+    max-width: 70%;
+    min-height: 60%;
+    z-index: 99;
+    .title-section {
+        .intro {
+            font-size: .8vw;
+            color: grey;
+        }
+        .company-name {
+            font-size: 1.3vw;
+            color: white;
+            font-weight: bold;
+        }
+        .designation {
+            font-size: .8vw;
+            color: grey;
+            .highlighted-section{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .skill-badges {
+        margin: 2vh 0;
+        display: flex;
+        .badge {
+            background-color: $skill-badge-background-color;
+            display: flex;
+            margin-right:1vh;
+            color:rgb(225, 225, 225);
+            font-weight: bold;
+            padding:0.8vh 8px;
+            border-radius:2px;
+            align-self: center;
+            .logo-holder{
+                display: flex;
+                .badge-logo {
+                    width:2vh;
+                    height: 2vh;
+                }
+            }
+
+            .name{
+                align-content: center;
+                align-items: center;
+                font-size: 1.3vh;
+                margin-left: 1vh;
+            }
+        }
+    }
+
+    .experience-detail-section {
+        margin-top: 1.5vh;
+        margin-left:0.5vh;
+        .experience-detail{
+            align-items: center;
+            display: flex;
+            padding:0.3vh 0%;
+            .skill-logo {
+                width: 1vw;
+                height: 1vw;
+            }
+            .detail-point {
+                margin-left:1.5vh;
+                color: white;
+                font-size: 1.5vh;
+                font-weight: 400;
+            }
+        }
+
+    }
+}

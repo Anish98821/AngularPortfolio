@@ -1,0 +1,67 @@
+@use "../../../styles.scss" as *;
+
+.project-section{
+    padding:5%;
+    height: 60vh;
+    background-color: $secondary-color-light;
+    scroll-margin-top: 80px;
+    .title {
+        font-size: 5vh;
+        color:white;
+        .highlighted-text{
+            color: $primary-color;
+        }
+    }
+
+    .card-container{
+        display:flex;
+        margin-top:5vh;
+        justify-content: space-evenly;
+        scroll-margin-top: 80px;
+        .card{
+            cursor: pointer;
+            display:flex;
+            flex-direction: column;
+            width: 23vw;
+            height: 40vh;
+            max-width: 40vh;
+            background-color: $secondary-color;
+            padding: 5vh;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+            .image-holder{
+                padding:10%;
+                background-color: white;
+                margin-bottom: 7%;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+                .image{
+                    justify-self: center;
+                    width:80%;
+                }
+            }
+            .title{
+                font-size: 2vh;
+                font-weight: 700;
+                color: $primary-color;
+            }
+            .description{
+                font-size:1.7vh;
+                margin-top:5px;
+                color: white;
+                font-weight: 200;
+            }
+            .logo-group{
+                margin-top: auto;
+                .logo{
+                    width:3vh;
+                    margin-right: 1vh;
+                }
+            }
+        }
+    }
+}
