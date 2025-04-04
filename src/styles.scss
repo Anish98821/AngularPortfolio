@@ -2,6 +2,11 @@ $primary-color:#8F55EF;
 $secondary-color:#151515;
 $secondary-color-light:#1b1b1b;
 
+$device-small: 576px;
+$device-medium: 768px;
+$device-large: 992px;
+$device-xlarge: 1200px;
+$device-xxlarge: 1400px;
 
 html {
     scroll-behavior: smooth;

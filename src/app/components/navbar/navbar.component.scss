@@ -1,15 +1,15 @@
 @use "../../../styles.scss" as *;
 
 .navbar{
+    box-sizing: border-box;
     position: fixed;
     display:flex;
     height:80px;
-    width: 92vw;
+    width:100%;
     background-color: $secondary-color-light;
     justify-items: center;
     align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding:0 2em; 
     z-index: 100;
 
     .title-text{
@@ -18,19 +18,35 @@
         font-size: 20px;
     }
 
-    .navbar-link-group{
+    .regular-navbar-link-group{
         display: flex;
         margin-left: auto;
-    }
-    
-    .navbar-link {
-        text-decoration: none;
-        color: $primary-color;
-        margin-left: 70px;
-        transition: color 0.2s ease-in-out;
-    
-        &:hover {
-            color: white;
+        .navbar-link {
+                text-decoration: none;
+                color: $primary-color;
+                margin-left: 70px;
+                transition: color 0.2s ease-in-out;
+        
+                &:hover {
+                    color: white;
+                }
+        }
+
+        @media (max-width:$device-large){
+            display: none;
         }
     }
+
+    .mobile-hamburger{
+        margin-left: auto;
+        @media (min-width:$device-large) {
+            display: none;
+        }
+
+        img{
+        width: 2em;
+        }
+    }
+    
+
 }

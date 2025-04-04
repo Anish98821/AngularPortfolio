@@ -1,0 +1,22 @@
+@use "../styles.scss" as *;
+
+.desktop-view{
+    @media(max-width:$device-large) {
+        display: none;
+    }
+}
+
+.under-construction{
+
+    height: 100vh;
+
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    color: $primary-color;
+    font-size: small;
+    display: none;
+    @media(max-width:$device-large){
+        display: block;
+    }
+}
