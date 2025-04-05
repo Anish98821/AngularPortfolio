@@ -1,57 +1,120 @@
 @use "../../../styles.scss" as *;
 
+.section-vector {
+
+    margin-top: 5vh;
+    width: 45vw;
+    z-index: -5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .svg-elem-1 {
+        stroke-dashoffset: 2733.686px;
+        stroke-dasharray: 2733.686px;
+        transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+    }
+
+    &.active {
+        .svg-elem-1 {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
 .hero-section{
-    padding-top: 10vh;
-    height:90vh;
+    opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+    
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    padding-top: 10dvh;
+    height:90dvh;
     display: flex;
     @media (max-width:$device-medium)  {
         flex-direction: column;
-
     }
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:5vw;
     align-items: center;
     color:white;  
     scroll-margin-top: 80px;
 
-    .hi-text{
-        font-size: 64px;
-    }
-    
-    .introduction-text{
-        font-size: 40px;
-    }
-    
-    .name-text{
-        color:$primary-color;
-    }
-    
-    .designation-text{
-        color:#989898
-    }
-    
-    .left-side{
-        max-width: 50%;
-    }
-    
-    .section-vector{
-        margin-top: 5vh;
-        width: 45vw;
-        z-index: -5;
-        position:absolute;
-    } 
-    .tech-logo-grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
-        gap: 10px;
-    }
-    
-    .tech-logo-grid-item {
-        width: 10vh; /* Make images responsive */
-        margin: 3vh;
-        transition: transform 0.2s ease-in-out;
 
-        &:hover{
-            transform: scale(1.3);
+    .intro-section{
+        @include responsive($device-medium) {
+                margin-top: 20%;
+                height: 70vh;
+                align-content: center;
+        }
+        .hi-text {
+                font-size: 64px;
+                @include responsive($device-medium){
+                    font-size: 12vw
+                }
+            }
+        .introduction-text {
+            @include responsive($device-medium) {
+                    font-size: 7vw
+                }
+            font-size: 40px;
+            .name-text {
+                color: $primary-color;
+            }
+        }
+        .designation-text {
+            color: #989898;
+            @include responsive($device-medium) {
+                    font-size: 3vw
+            }
         }
     }
+    
+
+
+    .tech-stack-section{
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        .tech-logo-grid-container {
+
+                display: grid;
+                grid-template-columns: repeat(4, 10%);
+                grid-template-rows: repeat(2, 20%);
+                row-gap: 20%;
+                column-gap: 5%;
+                align-content: center;
+                justify-content: center;
+
+                @include responsive($device-medium){
+                    row-gap: 30%;
+                    column-gap: 20%;
+                }
+
+                .tech-logo-grid-item {
+                    width: 100%;
+                    margin:40%;
+                    max-width: clamp(70%, 10vw, 750px);
+                    min-width: 30px; 
+                    align-self: center;
+                    justify-self: center;
+                    transition: transform 0.2s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+    
+
+    }
+
 }
