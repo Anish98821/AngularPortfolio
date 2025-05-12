@@ -8,6 +8,22 @@ $device-large: 992px;
 $device-xlarge: 1200px;
 $device-xxlarge: 1400px;
 
+$subtitle-size: 2em;
+
+@mixin responsive($breakpoint, $direction: max) {
+    @if $direction ==max {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else if $direction ==min {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
 html {
     scroll-behavior: smooth;
 
@@ -18,6 +34,10 @@ html {
     }
 }
 
+body.lock-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
 
 
 

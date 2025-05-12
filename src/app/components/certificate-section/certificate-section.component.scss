@@ -10,13 +10,25 @@
         .highlighted-section{
             color: $primary-color;
         }
+
+        @include responsive($device-medium) {
+            font-size: 4vh;
+        }
+
+        @include responsive($device-small) {
+            font-size: 3.5vh;
+        }
     }
 
     .card-grid{
         margin-top: 5vh;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(3, 1fr); // Creates 3 equal columns
+        grid-template-columns: repeat(3, 1fr); 
+
+        @include responsive($device-medium){
+            grid-template-columns: repeat(1, 1fr);
+        }
         
         .certificate-card{
             width:auto;
@@ -32,6 +44,13 @@
             transition: transform ease-in-out 0.25s;
             &:hover{
                 transform: scale(1.05);
+            }
+
+            @include responsive($device-medium){
+                max-width: none;
+                &:hover{
+                    transform: none;
+                }
             }
 
             .issuer-logo{

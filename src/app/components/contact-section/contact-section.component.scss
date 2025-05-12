@@ -6,8 +6,16 @@
     background-color: black;
     display: flex;
     align-items: center;
+    @include responsive($device-medium){
+        align-items: start;
+        padding:5%;
+        height: 30vh;
+    }
     .section-vector{
         width:70%;
+        @include responsive($device-small){
+            display:  none;
+        }
     }
     .title {
         font-size: 5vh;
@@ -16,15 +24,32 @@
         .highlighted-text{
             color: $primary-color;
         }
+        @include responsive($device-medium) {
+            font-size: 4vh;
+            margin-bottom: 5vh;
+        }
+
+        @include responsive($device-small) {
+            font-size: 3.5vh;
+        }
     }
     .links-section{
         margin:5vh;
+        @include responsive($device-medium){
+            margin: 2vh;
+        }
         .link-card{
             align-items: center;
             display: flex;
             margin:5vh;
+            @include responsive($device-medium){
+                margin:2vh;
+            }
             .logo{
                 width:4vh;
+                @include responsive($device-medium){
+                    width: 3vh;
+                }
             }
             .link{
                 text-decoration: none;
