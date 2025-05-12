@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { HeroSectionComponent } from "./components/hero-section/hero-section.component";
 import { ExperienceSectionComponent } from "./components/experience-section/experience-section.component";
@@ -13,6 +13,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'AngularCSR';
+
+  ngOnInit() {
+  document.body.classList.add('lock-scroll');
+
+  setTimeout(() => {
+    document.body.classList.remove('lock-scroll');
+  }, 2500); // duration of your hero animation (in ms)
+}
+
 }

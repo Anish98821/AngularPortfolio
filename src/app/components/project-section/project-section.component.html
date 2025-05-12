@@ -1,26 +1,32 @@
 <div class="project-section" id="project-section">
-    <span class="title">
-      Things I have <span class="highlighted-text">built</span>
-    </span>
-    <div class="card-container">
+  <span class="title">
+    Things I have <span class="highlighted-text">built</span>
+  </span>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" (click)="scrollLeft()">&lt;</button>
+
+    <div class="card-container" #scrollContainer>
       @for (project of data; track project.name) {
-        <div class="card" (click)="project.url ? navigate(project.url) : null">
-          <div class="image-holder">
-            <img class="image" [src]="project.image" alt="{{ project.name }}">
-          </div>
-          <div class="title">
-            {{ project.name }}
-          </div>
-          <div class="description">
-            {{ project.description }}
-          </div>
-          <div class="logo-group">
-            @for (tech of project.technologies; track tech) {
-              <img [src]="tech" alt="Technology Logo" class="logo">
-            }
-          </div>
+      <div class="card" (click)="project.url ? navigate(project.url) : null">
+        <div class="image-holder">
+          <img class="image" [src]="project.image" alt="{{ project.name }}">
         </div>
+        <div class="title">
+          {{ project.name }}
+        </div>
+        <div class="description">
+          {{ project.description }}
+        </div>
+        <div class="logo-group">
+          @for (tech of project.technologies; track tech) {
+          <img [src]="tech" alt="Technology Logo" class="logo">
+          }
+        </div>
+      </div>
       }
     </div>
+
+    <button class="scroll-btn right" (click)="scrollRight()">&gt;</button>
   </div>
-  
+</div>
